@@ -50,7 +50,7 @@ static struct fb_videomode lcdif_modedb[] = {
 	0,},
     {
     /* 480x800@ 75 Hz , pixel clk @ 30.72MHz */
-    "ORTUSTECH-WVGA", 75, 800, 480, 32552, 10, 8, 2, 2, 10, 2,
+    "ORTUSTECH-WVGA", 75, 480, 800, 32552, 10, 8, 2, 2, 10, 2,
     0,
     FB_VMODE_NONINTERLACED,
     0,},
