@@ -59,7 +59,7 @@
 //};
 
 &mxcfb1 {
-	status = "disabled";
+	status = "okay";
 };
 
 &mxcfb2 {
@@ -67,7 +67,7 @@
 };
 
 &mxcfb3 {
-	status = "okay";
+	status = "disabled";
 };
 
 &mxcfb4 {
