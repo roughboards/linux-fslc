@@ -2132,6 +2132,9 @@ static int mxcfb_option_setup(struct platform_device *pdev, struct fb_info *fbi)
 
 	if (!options || !*options)
 		return 0;
+    
+    // get rotate parameter from device tree
+    fbi->par.rotate = pdata->rotate;
 
 	while ((opt = strsep(&options, ",")) != NULL) {
 		if (!*opt)
@@ -2445,7 +2448,8 @@ static int mxcfb_get_of_property(struct platform_device *pdev,
 	int err;
 	int len;
 	u32 bpp, int_clk;
-	u32 late_init;
+    u32 late_init;
+    u8 rotate;
 
 	err = of_property_read_string(np, "disp_dev", &disp_dev);
 	if (err < 0) {
@@ -2475,6 +2479,11 @@ static int mxcfb_get_of_property(struct platform_device *pdev,
 		dev_dbg(&pdev->dev, "get of property late_init fail\n");
 		return err;
 	}
+    err = of_property_read_u8(np, "rotate", &rotate);
+    if (err) {
+        dev_dbg(&pdev->dev, "get of property rotate fail\n");
+        return err;
+    }
 
 	if (!strncmp(pixfmt, "RGB24", 5))
 		plat_data->interface_pix_fmt = IPU_PIX_FMT_RGB24;
@@ -2510,6 +2519,7 @@ static int mxcfb_get_of_property(struct platform_device *pdev,
 	plat_data->default_bpp = bpp;
 	plat_data->int_clk = (bool)int_clk;
 	plat_data->late_init = (bool)late_init;
+    plat_data->rotate = rotate;
 	return err;
 }
 

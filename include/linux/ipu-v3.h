@@ -756,6 +756,8 @@ struct ipuv3_fb_platform_data {
 	 * channel in bootloader.
 	 */
 	bool                            late_init;
+    // rotate the display
+    u8                              rotate;
 };
 
 #endif /* __LINUX_IPU_V3_H_ */
