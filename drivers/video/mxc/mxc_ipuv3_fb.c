@@ -2134,7 +2134,7 @@ static int mxcfb_option_setup(struct platform_device *pdev, struct fb_info *fbi)
 		return 0;
     
     // get rotate parameter from device tree
-    fbi->par.rotate = pdata->rotate;
+    fbi->var.rotate = pdata->rotate;
 
 	while ((opt = strsep(&options, ",")) != NULL) {
 		if (!*opt)
