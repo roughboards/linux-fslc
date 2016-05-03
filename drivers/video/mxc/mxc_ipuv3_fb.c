@@ -2566,6 +2566,9 @@ static int mxcfb_probe(struct platform_device *pdev)
 		goto init_fbinfo_failed;
 	}
 
+    // bring rotate from device tree to fbi
+    fbi->var.rotate = platform_data->rotate;
+    
 	ret = mxcfb_option_setup(pdev, fbi);
 	if (ret)
 		goto get_fb_option_failed;
