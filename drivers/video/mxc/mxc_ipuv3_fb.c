@@ -2567,7 +2567,7 @@ static int mxcfb_probe(struct platform_device *pdev)
 	}
 
     // bring rotate from device tree to fbi
-    fbi->var.rotate = platform_data->rotate;
+    fbi->var.rotate = plat_data->rotate;
     
 	ret = mxcfb_option_setup(pdev, fbi);
 	if (ret)
