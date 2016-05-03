@@ -23,7 +23,7 @@
  *
  * @ingroup Framebuffer
  */
-
+#define DEBUG
 /*!
  * Include files
  */
