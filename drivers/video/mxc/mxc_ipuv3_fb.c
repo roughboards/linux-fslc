@@ -1956,8 +1956,6 @@ static struct fb_info *mxcfb_init_fbinfo(struct device *dev, struct fb_ops *ops)
 	mxcfbi = (struct mxcfb_info *)fbi->par;
 
 	fbi->var.activate = FB_ACTIVATE_NOW;
-    // make rotate right default fro testing only
-    fbi->var.rotate = IPU_ROTATE_90_RIGHT;
 
 	fbi->fbops = ops;
 	fbi->flags = FBINFO_FLAG_DEFAULT;
@@ -2566,7 +2564,7 @@ static int mxcfb_probe(struct platform_device *pdev)
 	}
 
     // bring rotate from device tree to fbi
-    //fbi->var.rotate = plat_data->rotate;
+    fbi->var.rotate = plat_data->rotate;
     
 	ret = mxcfb_option_setup(pdev, fbi);
 	if (ret)
