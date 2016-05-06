@@ -272,6 +272,13 @@
 			>;
 		};
 
+        pinctrl_touch: touchgrp {
+            fsl,pins = <
+                MX6QDL_PAD_SD2_DAT0__AUD4_RXD		0x80000000
+                MX6QDL_PAD_SD2_DAT0__GPIO1_IO15		0x80000000
+            >;
+        };
+
 		pinctrl_ecspi1: ecspi1grp {
 			fsl,pins = <
 				MX6QDL_PAD_EIM_D17__ECSPI1_MISO		0x100b1
