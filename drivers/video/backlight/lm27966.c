@@ -56,14 +56,13 @@ static int lm27966_backlight_update_status(struct backlight_device *backlight)
 		brightness = 0;
 
 	if (brightness) {
-		lm27966_write(lv, lm27966_CTRL1,
-			       lm27966_CPSW | lm27966_C10 | lm27966_CKSW);
-		lm27966_write(lv, lm27966_CTRL2,
-			       lm27966_MSW | lm27966_MLED4 |
-			       (brightness - 1));
+		lm27966_write(lv, LM27966_ENABLE_REG,
+			       LM27966_ENABLE_DEFAULT | 1);
+		lm27966_write(lv, LM27966_DISP_BRIGHTNESS_REG,
+			       LM27966_DISP_BRIGHTNESS_MASK & (brightness - 1));
 	} else {
-		lm27966_write(lv, lm27966_CTRL1, 0);
-		lm27966_write(lv, lm27966_CTRL2, 0);
+		lm27966_write(lv, LM27966_ENABLE_REG, LM27966_ENABLE_DEFAULT);
+		lm27966_write(lv, LM27966_DISP_BRIGHTNESS_REG, LM27966_DISP_BRIGHTNESS_DEFAULT);
 	}
 
 	return 0;
