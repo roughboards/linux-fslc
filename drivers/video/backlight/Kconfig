@@ -439,7 +439,7 @@ config BACKLIGHT_LV5207LP
 	  If you have a Sanyo LV5207LP say Y to enable the backlight driver.
 
 config BACKLIGHT_LM27966
-	tristate “LM27966 Backlight"
+	tristate "TI LM27966 Backlight"
 	depends on I2C
 	help
 	  If you have a Texas Instruments LM27966 say Y to enable the backlight driver.
