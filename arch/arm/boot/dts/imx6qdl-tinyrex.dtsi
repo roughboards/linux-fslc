@@ -274,7 +274,7 @@
 
         pinctrl_touch: touchgrp {
             fsl,pins = <
-                MX6QDL_PAD_SD2_DAT0__AUD4_RXD		0x80000000
+                MX6QDL_PAD_SD2_DAT2__GPIO1_IO13		0x80000000
                 MX6QDL_PAD_SD2_DAT0__GPIO1_IO15		0x80000000
             >;
         };
