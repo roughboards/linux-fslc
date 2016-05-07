@@ -25,7 +25,7 @@
 
 &i2c2 {
 	/* Goodix 970 touchscreen controller */
-    gt970@0 {
+gt970: gt970@14 {
         compatible = "goodix,gt970";
         reg = <0x14>;
         interrupt-parent = <&gpio1>;
