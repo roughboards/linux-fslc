@@ -29,7 +29,7 @@ gt970: gt970@14 {
         compatible = "goodix,gt970";
         reg = <0x14>;
         interrupt-parent = <&gpio1>;
-        interrupts = <0 1>;
+        interrupts = <15 0>;
 
         irq-gpios = <&gpio1 15 0>;
         reset-gpios = <&gpio1 13 0>;
