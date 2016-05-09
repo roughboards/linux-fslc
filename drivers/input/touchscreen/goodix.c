@@ -705,6 +705,9 @@ static void goodix_read_config(struct goodix_ts_data *ts)
     if (ts->rotated_screen)
         dev_dbg(&ts->client->dev,
                 "Applying '180 degrees rotated screen' quirk\n");
+    dev_dbg(&ts->client->dev,
+            "Config read: abs_x_max %d, abs_y_max %d, int_trigger_type %d, max_touch_num %d",
+            ts->abs_x_max, ts->abs_y_max, ts->int_trigger_type, ts->max_touch_num);
 }
 
 /**
