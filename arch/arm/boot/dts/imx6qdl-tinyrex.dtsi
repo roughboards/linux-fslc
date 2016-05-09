@@ -259,8 +259,8 @@
 				MX6QDL_PAD_KEY_ROW4__GPIO4_IO15 	0x80000000 /* USB0 Pwr */
 				MX6QDL_PAD_GPIO_4__GPIO1_IO04 		0x80000000 /* USB1 Pwr */
 				MX6QDL_PAD_GPIO_9__WDOG1_B		0x80000000 /* WDOG */
-                MX6QDL_PAD_SD2_DAT2__GPIO1_IO13		0x80000000 /* touch reset */
-                MX6QDL_PAD_SD2_DAT0__GPIO1_IO15		0x80000000 /* touch irq */
+                //MX6QDL_PAD_SD2_DAT2__GPIO1_IO13		0x80000000 /* touch reset */
+                //MX6QDL_PAD_SD2_DAT0__GPIO1_IO15		0x80000000 /* touch irq */
 			>;
 		};
 
