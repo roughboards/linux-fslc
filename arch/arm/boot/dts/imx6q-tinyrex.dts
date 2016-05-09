@@ -33,8 +33,6 @@ gt970: gt970@14 {
 
         irq-gpios = <&gpio1 15 0>;
         reset-gpios = <&gpio1 13 0>;
-        pinctrl-names = "default";
-        pinctrl-0 = <&pinctrl_touch>;
     };
 };
 
